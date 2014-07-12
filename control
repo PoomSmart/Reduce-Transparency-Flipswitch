@@ -1,0 +1,9 @@
+Package: org.thebigboss.contrastbgtoggle
+Name: Increase Contrast Flipswitch
+Depends: mobilesubstrate, com.a3tweaks.flipswitch, firmware (>= 7.0)
+Version: 0.0.1
+Architecture: iphoneos-arm
+Description: Fast toggling for iOS 7 background contrast amount.
+Maintainer: PoomSmart
+Author: PoomSmart
+Section: Addons (Flipswitch)
