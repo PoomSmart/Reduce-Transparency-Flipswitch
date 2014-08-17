@@ -13,7 +13,7 @@ extern "C" void _AXSSetEnhanceBackgroundContrastEnabled(BOOL enabled);
 {
 	return _AXSEnhanceBackgroundContrastEnabled() ? FSSwitchStateOn : FSSwitchStateOff;
 }
-//com.apple.accessibility.cache.enhance.background.contrast
+
 - (void)applyState:(FSSwitchState)newState forSwitchIdentifier:(NSString *)switchIdentifier
 {
 	if (newState == FSSwitchStateIndeterminate)
