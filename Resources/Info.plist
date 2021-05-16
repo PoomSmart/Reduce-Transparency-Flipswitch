@@ -9,7 +9,7 @@
 	<key>CFBundleIdentifier</key>
 	<string>com.PS.ContrastBGToggle</string>
 	<key>CFBundleDisplayName</key>
-	<string>Increase Contrast</string>
+	<string>Reduce Transparency</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundlePackageType</key>
