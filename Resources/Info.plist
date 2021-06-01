@@ -26,7 +26,5 @@
 	<string>3.0</string>
 	<key>NSPrincipalClass</key>
 	<string>ContrastBGToggleSwitch</string>
-	<key>alternate-action-url</key>
-	<string>prefs:root=General&amp;path=ACCESSIBILITY/ENHANCE_BACKGROUND_CONTRAST</string>
 </dict>
 </plist>
