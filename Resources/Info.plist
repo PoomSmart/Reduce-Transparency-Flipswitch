@@ -5,9 +5,9 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>English</string>
 	<key>CFBundleExecutable</key>
-	<string>ContrastBGToggle</string>
+	<string>ReduceTransparencyFS</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.PS.ContrastBGToggle</string>
+	<string>com.PS.ReduceTransparencyFS</string>
 	<key>CFBundleDisplayName</key>
 	<string>Reduce Transparency</string>
 	<key>CFBundleInfoDictionaryVersion</key>
@@ -22,9 +22,7 @@
 	<string>1.0</string>
 	<key>DTPlatformName</key>
 	<string>iphoneos</string>
-	<key>MinimumOSVersion</key>
-	<string>3.0</string>
 	<key>NSPrincipalClass</key>
-	<string>ContrastBGToggleSwitch</string>
+	<string>ReduceTransparencySwitch</string>
 </dict>
 </plist>

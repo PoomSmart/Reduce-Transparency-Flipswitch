@@ -1,9 +1,12 @@
-Package: org.thebigboss.contrastbgtoggle
+Package: com.ps.reducetransparencyflipswitch
 Name: Reduce Transparency Flipswitch
-Depends: mobilesubstrate, com.a3tweaks.flipswitch, firmware (>= 7.0)
-Version: 0.0.1
+Depends: mobilesubstrate, com.a3tweaks.flipswitch, firmware (>= 11.0)
+Provides: org.thebigboss.contrastbgtoggle
+Replaces: org.thebigboss.contrastbgtoggle
+Conflicts: org.thebigboss.contrastbgtoggle
+Version: 1.0.0
 Architecture: iphoneos-arm
-Description: Fast toggling for Reduce Transparency.
+Description: Flipswitch toggle for Reduce Transparency.
 Maintainer: PoomSmart
 Author: PoomSmart
 Section: Addons (Flipswitch)

@@ -1,13 +1,12 @@
-SDKVERSION = 7.0
-ARCHS = armv7 armv7s arm64
+PACKAGE_VERSION = 1.0.0
+TARGET = iphone:clang:latest:11.0
 
-include theos/makefiles/common.mk
+include $(THEOS)/makefiles/common.mk
 
-BUNDLE_NAME = ContrastBGToggle
-ContrastBGToggle_FILES = Switch.xm
-ContrastBGToggle_FRAMEWORKS = UIKit
-ContrastBGToggle_LIBRARIES = flipswitch
-ContrastBGToggle_INSTALL_PATH = /Library/Switches
-ContrastBGToggle_LDFLAGS = -lAccessibility
+BUNDLE_NAME = ReduceTransparencyFS
+ReduceTransparencyFS_FILES = Switch.xm
+ReduceTransparencyFS_FRAMEWORKS = UIKit
+ReduceTransparencyFS_LIBRARIES = Accessibility flipswitch
+ReduceTransparencyFS_INSTALL_PATH = /Library/Switches
 
 include $(THEOS_MAKE_PATH)/bundle.mk

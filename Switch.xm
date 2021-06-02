@@ -1,29 +1,28 @@
-#import "FSSwitchDataSource.h"
-#import "FSSwitchPanel.h"
+#import <Foundation/Foundation.h>
+#import <Flipswitch/FSSwitchDataSource.h>
+#import <Flipswitch/FSSwitchPanel.h>
+#import <version.h>
 
-@interface ContrastBGToggleSwitch : NSObject <FSSwitchDataSource>
+@interface ReduceTransparencySwitch : NSObject <FSSwitchDataSource>
 @end
 
 extern "C" Boolean _AXSEnhanceBackgroundContrastEnabled();
 extern "C" void _AXSSetEnhanceBackgroundContrastEnabled(BOOL enabled);
 
-@implementation ContrastBGToggleSwitch
+@implementation ReduceTransparencySwitch
 
-- (FSSwitchState)stateForSwitchIdentifier:(NSString *)switchIdentifier
-{
+- (FSSwitchState)stateForSwitchIdentifier:(NSString *)switchIdentifier {
 	return _AXSEnhanceBackgroundContrastEnabled() ? FSSwitchStateOn : FSSwitchStateOff;
 }
 
-- (void)applyState:(FSSwitchState)newState forSwitchIdentifier:(NSString *)switchIdentifier
-{
+- (void)applyState:(FSSwitchState)newState forSwitchIdentifier:(NSString *)switchIdentifier {
 	if (newState == FSSwitchStateIndeterminate)
 		return;
 	_AXSSetEnhanceBackgroundContrastEnabled(newState == FSSwitchStateOn);
 }
 
-- (void)applyAlternateActionForSwitchIdentifier:(NSString *)switchIdentifier
-{
-	NSURL *url = [NSURL URLWithString:(kCFCoreFoundationVersionNumber > 1665.0f ? @"prefs:root=ACCESSIBILITY&path=DISPLAY_AND_TEXT#REDUCE_TRANSPARENCY" : @"prefs:root=General&path=ACCESSIBILITY/ENHANCE_BACKGROUND_CONTRAST#REDUCE_TRANSPARENCY")];
+- (void)applyAlternateActionForSwitchIdentifier:(NSString *)switchIdentifier {
+	NSURL *url = [NSURL URLWithString:IS_IOS_OR_NEWER(iOS_13_0) ? @"prefs:root=ACCESSIBILITY&path=DISPLAY_AND_TEXT#REDUCE_TRANSPARENCY" : @"prefs:root=General&path=ACCESSIBILITY/ENHANCE_BACKGROUND_CONTRAST#REDUCE_TRANSPARENCY"];
 	[[FSSwitchPanel sharedPanel] openURLAsAlternateAction:url];
 }
 
